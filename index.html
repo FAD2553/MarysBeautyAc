@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mari's Beauty Academy | L'Excellence de la Beauté à Ouagadougou</title>
+    <meta name="description" content="Mari's Beauty Academy - Spa, Esthétique, Coiffure, Onglerie et Formation professionnelle à Ouagadougou. Vivez une expérience royale.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS for reveal animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div id="top-bar" class="top-bar">
+        <div class="marquee">
+            <p id="status-message">Chargement de l'état de l'académie...</p>
+            <a href="#contact" class="btn-top-whatsapp">Prendre RDV <i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="assets/logo.png" alt="MBA Logo">
+        </div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Mari's Beauty Academy">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#training">Formation</a></li>
+                <li><a href="#contact" class="btn-primary">Prendre RDV</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg" style="background-image: url('assets/makeup.png'); background-size: cover; background-position: center;"></div>
+        
+        <div class="container hero-content">
+            <h1 data-aos="fade-up" data-aos-duration="1000">L'Art de la Beauté <br><span>Réinventé</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Depuis 2020, Mari's Beauty Academy est votre destination ultime pour la beauté et le bien-être à Ouagadougou.</p>
+            <div class="hero-btns" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                <a href="#services" class="btn-primary">Nos Services</a>
+                <a href="#gallery" class="btn-secondary">Voir nos réalisations</a>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="assets/img_1_0.png" alt="Mari's Beauty Academy Introduction">
+                    <div class="experience-card">
+                        <h3>Depuis</h3>
+                        <p>2020</p>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <span class="subtitle">Notre Mission</span>
+                    <h2>Révéler la <span class="gold-text">Beauté</span> & le Bien-être</h2>
+                    <p>Chez Mari's Beauty Academy, notre mission est de révéler la beauté et le bien-être de chacun en offrant des soins personnalisés de haute qualité. Nous aspirons à devenir le leader dans l'industrie de la beauté en Afrique de l'Ouest.</p>
+
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle"></i> Produits Professionnels de luxe</li>
+                        <li><i class="fas fa-check-circle"></i> Formateurs Certifiés Internationaux</li>
+                        <li><i class="fas fa-check-circle"></i> Ambiance Royale & Relaxante</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Nos Spécialités</span>
+                <h2>Une Gamme <span class="gold-text">Complète</span> de Soins</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-img">
+                        <img src="assets/img_4_0.png" alt="Soins de cheveux & Head Spa">
+                    </div>
+                    <div class="service-info">
+                        <h3>Head Spa & Soins</h3>
+                        <p>Gommage, shampoing, masque vapeur, massage du crâne et du corps.</p>
+                        <span class="price">À partir de 6.000 F CFA</span>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-img">
+                        <img src="assets/img_7_0.png" alt="Nattes et Tresses">
+                    </div>
+                    <div class="service-info">
+                        <h3>Nattes & Tresses</h3>
+                        <p>Fixé simple, Knowless, Tapis tracé, Nattes Américaines et Tissage.</p>
+                        <span class="price">À partir de 2.000 F CFA</span>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-img">
+                        <img src="assets/img_9_0.png" alt="Locks cheveux">
+                    </div>
+                    <div class="service-info">
+                        <h3>Locks & Sister Locks</h3>
+                        <p>Pose, rajouts, mini locks et entretien pour adultes et enfants.</p>
+                        <span class="price">À partir de 15.000 F CFA</span>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-img">
+                        <img src="assets/img_11_0.png" alt="Perruques & Teinture">
+                    </div>
+                    <div class="service-info">
+                        <h3>Perruques & Autres</h3>
+                        <p>Confection, entretien, défrisage, teinture et Curly.</p>
+                        <span class="price">À partir de 4.000 F CFA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Galerie</span>
+                <h2>Nos <span class="gold-text">Réalisations</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up"><img src="assets/img_0_0.png" alt="Réalisation 1"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="assets/img_5_0.png" alt="Réalisation 2"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="assets/img_8_0.png" alt="Réalisation 3"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="assets/img_12_0.png" alt="Logo Academy"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Training Section -->
+    <section id="training" class="training">
+        <div class="container training-container">
+            <div class="training-content" data-aos="fade-up">
+                <span class="subtitle">Devenez une Experte</span>
+                <h2>Formation Professionnelle <span class="gold-text">Certifiante</span></h2>
+                <p>Lancez votre carrière dans le monde du luxe. Nous formons les leaders de demain en Esthétique, Maquillage et Onglerie avec des kits complets inclus.</p>
+                <div class="training-perks">
+                    <div class="perk">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Diplôme reconnu</p>
+                    </div>
+                    <div class="perk">
+                        <i class="fas fa-briefcase"></i>
+                        <p>Stage garanti</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary">S'inscrire à la prochaine session</a>
+            </div>
+            <div class="training-img" data-aos="fade-left">
+                <img src="assets/hero.png" alt="Formation MBA">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Nous <span class="gold-text">Contacter</span></h2>
+                    <p>Une question ? Une envie de changement ? Écrivez-nous ou passez nous voir directement à l'académie.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>Rue 14.26, Kalgondin, Ouagadougou (Près de la BNSP)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Téléphone / WhatsApp</h4>
+                                <p>+226 56 21 10 62</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lun - Sam: 09h00 - 20h00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container" data-aos="zoom-in">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.4847500606666!2d-1.5038258032104788!3d12.354173200000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebfc9b34be99d%3A0xd0d759544817858!2sMari&#39;s%20Beauty%20Academy!5e1!3m2!1sfr!2sbf!4v1773097025850!5m2!1sfr!2sbf" width="100%" height="300" style="border:0; border-radius: 20px; box-shadow: var(--shadow);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form id="whatsappForm" class="contact-form">
+                        <h3>Prendre Rendez-vous</h3>
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Votre Nom complet" required>
+                        </div>
+                        <div class="input-group">
+                            <select id="service" required>
+                                <option value="" disabled selected>Choisir un service</option>
+                                <option value="Spa & Hammam">Spa & Hammam</option>
+                                <option value="Maquillage">Maquillage</option>
+                                <option value="Onglerie">Onglerie</option>
+                                <option value="Coiffure">Coiffure</option>
+                                <option value="Formation">Formation Professionalle</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="4" placeholder="Votre message ou date souhaitée..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span>Envoyer via WhatsApp</span>
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content text-center">
+            <img src="assets/logo.png" alt="MBA Logo" class="footer-logo">
+            <p>"La peau parfaite est le reflet d'une bonne santé intérieure"</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mari's Beauty Academy. Design d'Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
