@@ -20,8 +20,13 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll 'shaking' */
+    width: 100%;
 }
 
 body {
@@ -29,7 +34,35 @@ body {
     background-color: var(--white);
     color: var(--chocolate);
     line-height: 1.6;
-    overflow-x: hidden;
+}
+
+/* Fix for AOS causing overflow on mobile */
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+
+/* --- Top Bar Marquee Fix --- */
+.marquee {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    animation: marquee 30s linear infinite;
+    width: max-content; /* Ensure width is calculated correctly */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Standard marquee trick with duplicated content if needed, but here simple shift */
+}
+
+/* Duplicating content in top-bar for seamless loop in JS if needed, but for now just fix overflow */
+.top-bar {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .container {

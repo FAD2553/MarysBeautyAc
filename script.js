@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Initialize AOS
+    // Initialize AOS with mobile optimization
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
         once: true,
-        mirror: false
+        mirror: false,
+        disable: 'mobile' // Best way to stop animations from 'shaking' the mobile view
     });
+
+    // Top Bar Marquee Duplication for smooth loop
+    const marquee = document.querySelector('.marquee');
+    if (marquee) {
+        marquee.innerHTML += marquee.innerHTML; // Duplicate content for seamless transition
+    }
 
     // Dynamic Top Bar Status
     const statusMsg = document.getElementById('status-message');
