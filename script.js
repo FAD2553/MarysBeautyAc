@@ -67,27 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
     });
 
-    // WhatsApp Form Logic
-    const whatsappForm = document.getElementById('whatsappForm');
-    const phoneNumber = "22656211062";
-
-    whatsappForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-
-        const whatsappMessage = `*Nouveau Rendez-vous - Mari's Beauty Academy*%0A%0A` +
-                                `*Nom:* ${name}%0A` +
-                                `*Service:* ${service}%0A` +
-                                `*Message:* ${message}`;
-
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-        
-        window.open(whatsappURL, '_blank');
-    });
-
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -106,6 +85,38 @@ document.addEventListener('DOMContentLoaded', () => {
             heroBg.style.transform = `translate(-50%, -50%) translateY(${scrollValue * 0.5}px)`;
         }
     });
+
+    // Hero Background Slideshow
+    const heroBg = document.querySelector('.hero-bg');
+    const heroImages = [
+        'assets/IMG_8080.JPG.jpeg',
+        'assets/IMG_8086.JPG.jpeg',
+        'assets/landing/IMG_8079.JPG.jpeg',
+        'assets/landing/IMG_8082.JPG.jpeg',
+        'assets/landing/IMG_8084.JPG.jpeg',
+        'assets/landing/IMG_5855.JPG.jpeg'
+    ];
+    let currentImgIndex = 0;
+
+    // Preload all hero images
+    heroImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
+    const changeHeroBackground = () => {
+        currentImgIndex = (currentImgIndex + 1) % heroImages.length;
+        
+        // Create a temporary image to preload
+        const img = new Image();
+        img.src = heroImages[currentImgIndex];
+        img.onload = () => {
+            heroBg.style.backgroundImage = `url('${heroImages[currentImgIndex]}')`;
+        };
+    };
+
+    // Change background every 5 seconds
+    setInterval(changeHeroBackground, 5000);
 
     // Image Modal Lightbox Logic
     const modal = document.getElementById("imageModal");

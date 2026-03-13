@@ -1,3 +1,42 @@
+/* --- Image Feed --- */
+.image-feed {
+    padding: 60px 0;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.feed-container {
+    display: flex;
+    gap: 20px;
+    animation: scroll-feed 40s linear infinite;
+    width: max-content;
+}
+
+.feed-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+.feed-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.feed-img:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes scroll-feed {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 :root {
     --gold: #D4AF37;
     --gold-light: #F1D279;
@@ -18,6 +57,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
 }
 
 html, body {
@@ -319,6 +362,7 @@ img {
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
+    transition: background-image 1.5s ease-in-out;
 }
 
 .hero-content {
@@ -597,10 +641,86 @@ img {
     box-shadow: -20px 20px 0 var(--gold);
 }
 
-/* --- Contact --- */
-.contact {
+/* --- Univers --- */
+.univers {
     padding: 100px 0;
+    background: var(--white);
 }
+
+.univers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.univers-card {
+    position: relative;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.univers-img {
+    height: 100%;
+}
+
+.univers-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.univers-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(44,30,20,0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    transition: var(--transition);
+}
+
+.univers-info {
+    text-align: left;
+    color: var(--white);
+}
+
+.univers-info h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--gold);
+}
+
+.univers-info p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.univers-card:hover .univers-img img {
+    transform: scale(1.1);
+}
+
+.univers-card:hover .univers-overlay {
+    background: linear-gradient(to top, rgba(44,30,20,0.95), rgba(44,30,20,0.2));
+}
+
+@media (max-width: 992px) {
+    .univers-grid {
+        grid-template-columns: 1fr;
+    }
+    .univers-card {
+        height: 400px;
+    }
+}
+
 
 .contact-grid {
     display: grid;
