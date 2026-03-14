@@ -143,6 +143,35 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = "auto";
     };
 
+    // Gallery Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('add');
+                    // Small delay to allow fade out if we added it, but for now just hide
+                    item.classList.add('hide');
+                }
+            });
+            
+            // Re-trigger AOS to sync with filtered items
+            AOS.refresh();
+        });
+    });
+
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
