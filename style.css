@@ -196,6 +196,12 @@ img {
     white-space: nowrap;
     position: relative;
     z-index: 1001;
+    transition: var(--transition);
+}
+
+.top-bar.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .marquee {
@@ -238,7 +244,8 @@ img {
     top: 36px; /* Shifted down by top-bar height */
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
+    background: white;
     z-index: 1000;
     transition: var(--transition);
 }
@@ -251,6 +258,10 @@ img {
     backdrop-filter: blur(10px);
 }
 
+#navbar.no-top-bar {
+    top: 0;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -258,12 +269,12 @@ img {
 }
 
 .logo img {
-    height: 120px;
+    height: 80px;
     transition: var(--transition);
 }
 
 #navbar.scrolled .logo img {
-    height: 100px;
+    height: 60px;
 }
 
 .nav-links {

@@ -43,8 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
+    const topBar = document.getElementById('top-bar');
+    const heroSection = document.getElementById('home');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const scrollY = window.scrollY;
+        const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+        
+        if (scrollY > heroHeight) {
+            topBar.classList.add('hidden');
+            navbar.classList.add('no-top-bar');
+        } else {
+            topBar.classList.remove('hidden');
+            navbar.classList.remove('no-top-bar');
+        }
+        
+        if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
